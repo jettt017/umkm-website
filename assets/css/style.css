@@ -151,6 +151,20 @@ h4,
   border-radius: 1.5rem;
 }
 
+.hero-photo-wrap {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(90, 59, 34, 0.1);
+  box-shadow: var(--shadow);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+  display: block;
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -198,6 +212,10 @@ h4,
 .product-card,
 .info-card {
   padding: 1.35rem;
+}
+
+.feature-card,
+.product-card {
   height: 100%;
 }
 
@@ -252,6 +270,15 @@ h4,
   color: var(--brand-dark);
 }
 
+.product-image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 1px solid rgba(90, 59, 34, 0.1);
+  display: block;
+}
+
 .pill-list {
   display: flex;
   flex-wrap: wrap;
@@ -303,6 +330,47 @@ h4,
   box-shadow: 0 0 0 0.25rem rgba(139, 94, 52, 0.12);
 }
 
+.about-photo-wrap {
+  border-radius: 1.4rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.about-photo {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+  display: block;
+}
+
+.about-photo-caption {
+  padding: 0.9rem 1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.order-photo-wrap {
+  border-radius: 1.1rem;
+  overflow: hidden;
+  border: 1px solid rgba(90, 59, 34, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.order-photo {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  display: block;
+}
+
+.order-photo-caption {
+  padding: 0.75rem 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -330,6 +398,51 @@ h4,
   padding: 1.3rem;
   position: relative;
   overflow: hidden;
+}
+
+.gallery-card.with-image {
+  padding: 0;
+  min-height: 15rem;
+}
+
+.gallery-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-content {
+  position: absolute;
+  inset: 0;
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.56) 55%, rgba(255, 255, 255, 0.7) 100%);
+}
+
+.gallery-content.light-text {
+  color: #fff;
+  background: linear-gradient(180deg, rgba(26, 18, 10, 0.45) 0%, rgba(26, 18, 10, 0.3) 45%, rgba(26, 18, 10, 0.52) 100%);
+}
+
+.gallery-content .tag {
+  width: fit-content;
+}
+
+.gallery-content.light-text .tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.gallery-content.light-text p,
+.gallery-content.light-text .text-secondary {
+  color: rgba(255, 255, 255, 0.86) !important;
+}
+
+.brand-note-card {
+  min-height: 12rem;
 }
 
 .gallery-card::after {
@@ -466,5 +579,21 @@ h4,
 
   .gallery-card.large {
     min-height: 14rem;
+  }
+
+  .hero-photo {
+    height: 13rem;
+  }
+
+  .product-image {
+    height: 10.5rem;
+  }
+
+  .about-photo {
+    height: 12rem;
+  }
+
+  .order-photo {
+    height: 10.5rem;
   }
 }

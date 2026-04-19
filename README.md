@@ -8,7 +8,7 @@ Website statis UMKM bertema Kopi Senja.
 - `products.html` katalog produk
 - `services.html` layanan usaha
 - `gallery.html` galeri visual
-- `order.html` form rating/testimoni, tabel ulasan, dan tombol order via social media
+- `order.php` form rating/testimoni, tabel ulasan, dan tombol order via social media
 
 ## Cara membuka
 1. Buka `index.html` di browser.

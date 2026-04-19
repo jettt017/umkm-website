@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Galeri - Kopi Senja</title>
+    <link rel="icon" type="image/png" href="logo/logo.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Kopi Senja</a>
+        <a class="navbar-brand" href="index.html">Cerita Senja</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,7 +22,7 @@
             <li class="nav-item"><a class="nav-link" href="products.html">Produk</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Layanan</a></li>
             <li class="nav-item"><a class="nav-link active" href="gallery.html">Galeri</a></li>
-            <li class="nav-item"><a class="nav-link" href="order.html">Pesanan</a></li>
+            <li class="nav-item"><a class="nav-link" href="order.php">Pesanan</a></li>
           </ul>
         </div>
       </div>
@@ -41,40 +42,86 @@
       <section class="section pt-0">
         <div class="container">
           <div class="gallery-grid">
-            <article class="gallery-card large dark gallery-span-7">
-              <div class="tag mb-3 d-inline-block">Ruang produksi</div>
-              <h2 class="display-5">Proses sangrai dan packing dilakukan bertahap agar mutu tetap terjaga.</h2>
-              <p class="mt-3 mb-0">Gaya visual yang hangat ini dipakai agar pengunjung cepat menangkap karakter usaha.</p>
-              <div class="gallery-label">Sesi produksi</div>
+            <article class="gallery-card large gallery-span-7 with-image">
+              <img
+                class="gallery-photo"
+                src="https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=1600&q=80"
+                alt="Proses roasting kopi di ruang produksi"
+                loading="lazy"
+              />
+              <div class="gallery-content light-text">
+                <div class="tag mb-3 d-inline-block">Ruang produksi</div>
+                <h2 class="display-5">Proses sangrai dan packing dilakukan bertahap agar mutu tetap terjaga.</h2>
+                <p class="mt-3 mb-0">Gaya visual yang hangat ini dipakai agar pengunjung cepat menangkap karakter usaha.</p>
+                <div class="gallery-label">Sesi produksi</div>
+              </div>
             </article>
-            <article class="gallery-card gallery-span-5" style="background: linear-gradient(145deg, rgba(242,223,198,0.92), rgba(255,255,255,0.8));">
-              <div class="tag mb-3 d-inline-block">Kemasan</div>
-              <h2 class="h1">Paket gift box</h2>
-              <p class="text-secondary">Rapi untuk hadiah dan acara perusahaan.</p>
-              <div class="gallery-label">Custom packaging</div>
+            <article class="gallery-card gallery-span-5 with-image">
+              <img
+                class="gallery-photo"
+                src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?auto=format&fit=crop&w=1200&q=80"
+                alt="Kemasan gift box kopi siap kirim"
+                loading="lazy"
+              />
+              <div class="gallery-content">
+                <div class="tag mb-3 d-inline-block">Kemasan</div>
+                <h2 class="h1">Paket gift box</h2>
+                <p class="text-secondary mb-0">Rapi untuk hadiah dan acara perusahaan.</p>
+                <div class="gallery-label">Custom packaging</div>
+              </div>
             </article>
-            <article class="gallery-card gallery-span-4" style="background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(242,223,198,0.75));">
-              <div class="tag mb-3 d-inline-block">Biji kopi</div>
-              <h2 class="h1">Seleksi bahan baku</h2>
-              <p class="text-secondary">Biji dipilih sebelum masuk tahap roasting.</p>
-              <div class="gallery-label">Quality check</div>
+            <article class="gallery-card gallery-span-4 with-image">
+              <img
+                class="gallery-photo"
+                src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80"
+                alt="Seleksi biji kopi sebelum roasting"
+                loading="lazy"
+              />
+              <div class="gallery-content">
+                <div class="tag mb-3 d-inline-block">Biji kopi</div>
+                <h2 class="h1">Seleksi bahan baku</h2>
+                <p class="text-secondary mb-0">Biji dipilih sebelum masuk tahap roasting.</p>
+                <div class="gallery-label">Quality check</div>
+              </div>
             </article>
-            <article class="gallery-card dark gallery-span-4">
-              <div class="tag mb-3 d-inline-block">Seduhan</div>
-              <h2 class="h1">Menu kopi susu</h2>
-              <p>Favorit pelanggan harian karena rasa stabil dan mudah diterima.</p>
-              <div class="gallery-label">Menu harian</div>
+            <article class="gallery-card gallery-span-4 with-image">
+              <img
+                class="gallery-photo"
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80"
+                alt="Menu kopi susu favorit pelanggan"
+                loading="lazy"
+              />
+              <div class="gallery-content light-text">
+                <div class="tag mb-3 d-inline-block">Seduhan</div>
+                <h2 class="h1">Menu kopi susu</h2>
+                <p class="mb-0">Favorit pelanggan harian karena rasa stabil dan mudah diterima.</p>
+                <div class="gallery-label">Menu harian</div>
+              </div>
             </article>
-            <article class="gallery-card gallery-span-4" style="background: linear-gradient(145deg, rgba(255,248,239,0.95), rgba(255,255,255,0.8));">
-              <div class="tag mb-3 d-inline-block">Display</div>
-              <h2 class="h1">Etalase katalog</h2>
-              <p class="text-secondary">Membantu pelanggan memahami pilihan produk dengan cepat.</p>
-              <div class="gallery-label">Katalog rapi</div>
+            <article class="gallery-card gallery-span-4 with-image">
+              <img
+                class="gallery-photo"
+                src="https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=1200&q=80"
+                alt="Etalase produk kopi untuk katalog"
+                loading="lazy"
+              />
+              <div class="gallery-content">
+                <div class="tag mb-3 d-inline-block">Display</div>
+                <h2 class="h1">Etalase katalog</h2>
+                <p class="text-secondary mb-0">Membantu pelanggan memahami pilihan produk dengan cepat.</p>
+                <div class="gallery-label">Katalog rapi</div>
+              </div>
             </article>
-            <article class="gallery-card gallery-span-12" style="min-height: 10rem; background: linear-gradient(135deg, rgba(139,94,52,0.95), rgba(194,124,53,0.88)); color: #fff;">
-              <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end h-100">
+            <article class="gallery-card gallery-span-12 with-image brand-note-card">
+              <img
+                class="gallery-photo"
+                src="https://images.unsplash.com/photo-1444418185997-1145401101e0?auto=format&fit=crop&w=1600&q=80"
+                alt="Ruang kedai kopi dengan nuansa hangat"
+                loading="lazy"
+              />
+              <div class="gallery-content light-text d-flex flex-column flex-md-row justify-content-between align-items-md-end h-100">
                 <div>
-                  <div class="tag mb-3 d-inline-block" style="background: rgba(255,255,255,0.16); color: #fff;">Brand note</div>
+                  <div class="tag mb-3 d-inline-block">Brand note</div>
                   <h2 class="display-5 mb-2">Tampilan yang konsisten membuat tugas terlihat lebih lengkap dan profesional.</h2>
                 </div>
                 <div class="text-md-end">Siap untuk dokumentasi screenshot.</div>
@@ -90,7 +137,7 @@
         <div>Copyright 2026 Kopi Senja.</div>
         <div class="d-flex gap-3">
           <a href="about.html">Profil</a>
-          <a href="order.html">Pesanan</a>
+          <a href="order.php">Pesanan</a>
         </div>
       </div>
     </footer>
