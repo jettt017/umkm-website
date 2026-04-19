@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rating & Order - Kopi Senja</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Cerita Senja</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">Profil</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Produk</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Layanan</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+            <li class="nav-item"><a class="nav-link active" href="order.html">Pesanan</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="page-banner">
+      <div class="container">
+        <div class="banner-shell">
+          <div class="tag mb-3 d-inline-block">Rating pelanggan</div>
+          <h1 class="display-4 mb-3">Isi rating, testimoni tampil di tabel, dan order lewat social media.</h1>
+          <p class="section-text mb-0">Form pada halaman ini dipakai untuk input rating/testimoni, sedangkan pemesanan diarahkan langsung ke WhatsApp atau Instagram.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section pt-0">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <div class="contact-card h-100">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h2 class="section-title mb-0">Form Rating</h2>
+                  <span class="tag">Aktif</span>
+                </div>
+                <form id="orderForm" class="row g-3">
+                  <div class="col-12">
+                    <label for="nama" class="form-label">Nama pelanggan</label>
+                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Contoh: Rina" required />
+                  </div>
+                  <div class="col-12">
+                    <label for="produk" class="form-label">Produk yang dicoba</label>
+                    <select class="form-select" id="produk" name="produk" required>
+                      <option value="">Pilih produk</option>
+                      <option>Kopi Arabika Gayo</option>
+                      <option>Kopi Robusta Temanggung</option>
+                      <option>Gift Box Senja</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="jumlah" class="form-label">Rating (1 - 5)</label>
+                    <select class="form-select" id="jumlah" name="jumlah" required>
+                      <option value="">Pilih rating</option>
+                      <option value="5">5 - Sangat puas</option>
+                      <option value="4">4 - Puas</option>
+                      <option value="3">3 - Cukup</option>
+                      <option value="2">2 - Kurang</option>
+                      <option value="1">1 - Tidak puas</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="catatan" class="form-label">Testimoni</label>
+                    <textarea class="form-control" id="catatan" name="catatan" rows="4" placeholder="Contoh: rasanya enak dan pengiriman cepat"></textarea>
+                  </div>
+                  <div class="col-12 d-grid">
+                    <button type="submit" class="btn btn-brand btn-lg">Tambah rating ke tabel</button>
+                  </div>
+                </form>
+
+                <hr class="my-4" />
+
+                <div class="social-order-card">
+                  <h3 class="h2 mb-3">Order via Social Media</h3>
+                  <p class="section-text mb-3">Klik salah satu tombol untuk langsung chat/admin.</p>
+                  <div class="d-grid gap-2">
+                    <a
+                      class="btn btn-success btn-lg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://wa.me/6281234567890?text=Halo%20Kopi%20Senja%2C%20saya%20mau%20order%20produk%20kopi."
+                    >
+                      Order via WhatsApp
+                    </a>
+                    <a
+                      class="btn btn-outline-brand btn-lg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://instagram.com/kopisenja.id"
+                    >
+                      Kunjungi Instagram
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="table-card h-100">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-3">
+                  <div>
+                    <h2 class="section-title mb-1">Tabel Rating Pelanggan</h2>
+                    <p class="section-text mb-0">Total ulasan: <span id="totalOrders" class="tag">0</span></p>
+                  </div>
+                  <div class="tag" id="averageRating">Rata-rata: 0.0</div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table align-middle mb-0">
+                    <thead>
+                      <tr>
+                        <th>Nama</th>
+                        <th>Produk</th>
+                        <th>Rating</th>
+                        <th>Testimoni</th>
+                      </tr>
+                    </thead>
+                    <tbody id="orderTableBody">
+                      <tr>
+                        <td>Alya</td>
+                        <td>Kopi Arabika Gayo</td>
+                        <td>5</td>
+                        <td>Rasa bersih dan aromanya enak.</td>
+                      </tr>
+                      <tr>
+                        <td>Dimas</td>
+                        <td>Gift Box Senja</td>
+                        <td>4</td>
+                        <td>Packaging premium, cocok untuk hadiah.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col-12">
+              <div class="table-card">
+                <h3 class="section-title mb-2">Lokasi UMKM</h3>
+                <p class="section-text mb-3">Lokasi ini dipisah di bawah agar tidak gabung dengan form dan tabel rating.</p>
+                <div class="map-embed">
+                  <iframe
+                    title="Lokasi Kopi Senja"
+                    src="https://www.google.com/maps?q=Semarang&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between gap-2 border-top pt-4">
+        <div>Copyright 2026 Kopi Senja.</div>
+        <div class="d-flex gap-3">
+          <a href="products.html">Produk</a>
+          <a href="services.html">Layanan</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/order.js"></script>
+  </body>
+</html>
