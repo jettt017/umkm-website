@@ -84,7 +84,7 @@ function h(string $value): string
     <title>Rating & Order - Kopi Senja</title>
     <link rel="icon" type="image/png" href="logo/logo.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260419" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -187,7 +187,7 @@ function h(string $value): string
                       class="btn btn-success btn-lg"
                       target="_blank"
                       rel="noopener noreferrer"
-                      href="https://api.whatsapp.com/qr/XY5PSWPK2EZLD1?autoload=1&app_absent=0"
+                      href="https://wa.me/qr/XY5PSWPK2EZLD1"
                     >
                       Order via WhatsApp
                     </a>
@@ -246,7 +246,7 @@ function h(string $value): string
                 <div class="map-embed">
                   <iframe
                     title="Lokasi Kopi Senja"
-                    src="https://www.google.com/maps?q=Semarang&output=embed"
+                    src="https://www.google.com/maps?q=cerita+senja&output=embed"
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
                     allowfullscreen

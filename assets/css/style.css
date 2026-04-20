@@ -270,6 +270,15 @@ h4,
   color: var(--brand-dark);
 }
 
+.feature-image {
+  width: 100%;
+  height: 9.5rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 1px solid rgba(90, 59, 34, 0.1);
+  display: block;
+}
+
 .product-image {
   width: 100%;
   height: 12rem;
@@ -587,6 +596,10 @@ h4,
 
   .product-image {
     height: 10.5rem;
+  }
+
+  .feature-image {
+    height: 8.5rem;
   }
 
   .about-photo {
